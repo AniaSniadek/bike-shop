@@ -7,7 +7,7 @@ public class Producer {
         this.name = name;
     }
 
-    public String getName(){
+    public String getProducer(){
         return this.name;
     }
 }
