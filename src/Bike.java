@@ -24,4 +24,11 @@ public class Bike {
     public BikeDetails getDetails() {
         return this.details;
     }
+
+    public void getDetailsAsString(){
+        System.out.println("Producer: " + this.details.getProducerName() +
+                " | price: " + this.getPrice() + " | model: " +
+                details.getModelName() + " | type: " + this.details.getTypeName() +
+                " | material: " + this.details.getMaterialName());
+    }
 }
