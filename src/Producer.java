@@ -1,7 +1,7 @@
 public class Producer {
     private String name;
 
-    public Producer(){};
+    public Producer(){}
 
     public Producer(String name) {
         this.name = name;
