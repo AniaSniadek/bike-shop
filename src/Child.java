@@ -7,11 +7,12 @@ public class Child extends Bike{
     }
 
     @Override
-    public void getDetailsAsString() {
-        System.out.println("Producer: " + this.details.getProducerName() +
+    public String getDetailsAsString() {
+        String text = "Producer: " + this.details.getProducerName() +
                 " | price: " + this.getPrice() + " | model: " +
                 details.getModelName() + " | type: " + this.details.getTypeName() +
                 " | material: " + this.details.getMaterialName() +
-                " | number of wheels: " + this.childDetails.getNumberOfWheels());
+                " | number of wheels: " + this.childDetails.getNumberOfWheels();
+        return text;
     }
 }
