@@ -49,7 +49,15 @@ public class Main {
             magazine.printBikes();
         } else {
             System.out.println("Do you want to search for a bike by serial number? [Yes/No]");
+            String question2 = scanner.nextLine();
+            if(question2.equals("No")){
+                System.out.println("Thank you for using our program.");
+                System.exit(0);
+            }
         }
+
+
+
 
         //magazine.printBikes();
     }
