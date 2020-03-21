@@ -29,7 +29,11 @@ public class Main {
         //adding products to the Magazine
         Magazine magazine = new Magazine();
         magazine.addBike(bike1);
-        //magazine.addBike(childBike1);
+        magazine.addBike(bike2);
+        magazine.addBike(bike3);
+        magazine.addBike(bike4);
+        magazine.addBike(bike5);
+        magazine.addBike(childBike1);
 
         System.out.println(bike1.getDetailsAsString());
         magazine.printBikes();
