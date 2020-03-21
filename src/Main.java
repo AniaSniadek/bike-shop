@@ -14,17 +14,18 @@ public class Main {
         Material mat3 = new Material("carbon");
 
         //creating products
-        AdultDetails det1 = new AdultDetails(prod1, "Navigto", type1, mat1);
-        Adult bike1 = new Adult("M945", 980.00, det1);
+        //AdultDetails det1 = new AdultDetails(prod1, "Navigto", type1, mat1);
+        Adult bike1 = new Adult("M945", 980.00, prod1, "Navigto", type1, mat1);
 
-        ChildDetails childDet1 = new ChildDetails(prod1, "Kido", type1, mat1, 2);
-        Child childBike1 = new Child("P456", 459.00, childDet1);
+        //ChildDetails childDet1 = new ChildDetails(prod1, "Kido", type1, mat1, 2);
+        //Child childBike1 = new Child("P456", 459.00, childDet1);
 
         //adding products to the Magazine
         Magazine magazine = new Magazine();
         magazine.addBike(bike1);
-        magazine.addBike(childBike1);
+        //magazine.addBike(childBike1);
 
+        System.out.println(bike1.getDetailsAsString());
         magazine.printBikes();
     }
 }

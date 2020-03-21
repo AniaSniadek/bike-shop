@@ -1,18 +1,22 @@
 public class Child extends Bike{
-    public ChildDetails childDetails;
+    public int numberOfWheels;
 
-    public Child(String number, double price, ChildDetails details) {
-        super(number, price);
-        this.childDetails = details;
+    public Child(String number, double price, Producer producer, String model, Type type, Material material, int numberOfWheels) {
+        super(number, price, producer, model, type, material);
+        this.numberOfWheels = numberOfWheels;
+    }
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
     }
 
     @Override
     public String getDetailsAsString() {
-        String text = "Producer: " + this.details.getProducerName() +
+        String text = "Producer: " + this.getProducerName() +
                 " | price: " + this.getPrice() + " | model: " +
-                details.getModelName() + " | type: " + this.details.getTypeName() +
-                " | material: " + this.details.getMaterialName() +
-                " | number of wheels: " + this.childDetails.getNumberOfWheels();
+                this.getModelName() + " | type: " + this.getTypeName() +
+                " | material: " + this.getMaterialName() +
+                " | number of wheels: " + this.getNumberOfWheels();
         return text;
     }
 }

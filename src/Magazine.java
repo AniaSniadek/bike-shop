@@ -27,15 +27,15 @@ public class Magazine {
         return bikeList.elementAt(index);
     }
 
-    public Vector<Bike> findBike(BikeDetails findDetails){
-        Vector<Bike> matchingBikes = new Vector<Bike>();
-        for(Bike p : bikeList){
-            if(p.getDetails() == findDetails){
-                matchingBikes.add(p);
-            }
-        }
-        return matchingBikes;
-    }
+//    public Vector<Bike> findBike(BikeDetails findDetails){
+//        Vector<Bike> matchingBikes = new Vector<Bike>();
+//        for(Bike p : bikeList){
+//            if(p.getDetails() == findDetails){
+//                matchingBikes.add(p);
+//            }
+//        }
+//        return matchingBikes;
+//    }
 
     public void printBikes(){
         System.out.println("Bikes list:");

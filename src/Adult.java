@@ -1,9 +1,7 @@
 public class Adult extends Bike{
-    public AdultDetails adultDetails;
 
-    public Adult(String number, double price, AdultDetails adultDetails) {
-        super(number, price);
-        this.adultDetails = adultDetails;
+    public Adult(String number, double price, Producer producer, String model, Type type, Material material) {
+        super(number, price, producer, model, type, material);
     }
 
     @Override
