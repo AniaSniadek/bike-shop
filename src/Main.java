@@ -56,6 +56,14 @@ public class Main {
             }
         }
 
+        System.out.println("Enter the bike number which you are looking for:");
+        String number = scanner.nextLine();
+        boolean bikeIndex = magazine.findIndex(number);
+        if(!bikeIndex){
+            System.out.println("There is no bike with this number in stock.");
+        } else {
+            System.out.println("hejo");
+        }
 
 
 
