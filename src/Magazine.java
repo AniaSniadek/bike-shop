@@ -12,15 +12,14 @@ public class Magazine {
         bikeList.add(bike);
     }
 
-    public boolean findIndex(String number){
+    public int findIndex(String number){
         for(Bike p : bikeList){
             if(p.getNumber().equals(number)){
                 System.out.println("Bike with this number has been found:");
-                return true;
+                return bikeList.indexOf(p);
             }
         }
-        //System.out.println("There is no bike with this number in the system.");
-        return false;
+        return -1;
     }
 
     public Bike getBikeWithIndex(int index){

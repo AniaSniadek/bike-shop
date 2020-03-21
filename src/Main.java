@@ -53,17 +53,27 @@ public class Main {
             if(question2.equals("No")){
                 System.out.println("Thank you for using our program.");
                 System.exit(0);
+            } else if (!question2.equals("Yes")){
+                System.out.println("Invalid input.");
+                System.exit(0);
             }
         }
 
         System.out.println("Enter the bike number which you are looking for:");
         String number = scanner.nextLine();
-        boolean bikeIndex = magazine.findIndex(number);
-        if(!bikeIndex){
+        int bikeIndex = magazine.findIndex(number);
+        if(bikeIndex == -1){
             System.out.println("There is no bike with this number in stock.");
         } else {
-            System.out.println("hejo");
+            Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
+            System.out.println(foundedBike.getDetailsAsString());
+            System.out.println("Do you want to change the price of this bike? [Yes/No]");
+            String question2 = scanner.nextLine();
+            if(question2.equals("Yes")){
+
+            }
         }
+
 
 
 
