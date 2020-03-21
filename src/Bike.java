@@ -3,10 +3,9 @@ public class Bike {
     protected double price;
     protected BikeDetails details;
 
-    public Bike(String number, double price, BikeDetails details) {
+    public Bike(String number, double price) {
         this.number = number;
         this.price = price;
-        this.details = details;
     }
 
     public String getNumber() {
