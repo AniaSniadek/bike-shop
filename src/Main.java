@@ -21,10 +21,10 @@ public class Main {
         Adult bike5 = new Adult("F538", 999.00, prod1, "Bravo", type3, mat1);
 
         Child childBike1 = new Child("P456", 459.00, prod1, "Kido", type1, mat1, 2);
-        Child childBike2 = new Child("P456", 459.00, prod1, "Kido", type1, mat1, 2);
-        Child childBike3 = new Child("P456", 459.00, prod1, "Kido", type1, mat1, 2);
-        Child childBike4 = new Child("P456", 459.00, prod1, "Kido", type1, mat1, 2);
-        Child childBike5 = new Child("P456", 459.00, prod1, "Kido", type1, mat1, 2);
+        Child childBike2 = new Child("A345", 298.00, prod1, "Asid", type1, mat3, 2);
+        Child childBike3 = new Child("D387", 199.00, prod2, "Bobo", type1, mat1, 4);
+        Child childBike4 = new Child("O231", 537.00, prod2, "Jim", type1, mat2, 2);
+        Child childBike5 = new Child("J505", 101.00, prod1, "Niko", type1, mat3, 4);
 
         //adding products to the Magazine
         Magazine magazine = new Magazine();
