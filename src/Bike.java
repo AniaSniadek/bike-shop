@@ -6,6 +6,9 @@ public class Bike {
     protected Type type;
     protected Material material;
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+
     public Bike(String number, double price, Producer producer, String model, Type type, Material material) {
         this.number = number;
         this.price = price;
@@ -45,10 +48,10 @@ public class Bike {
     }
 
     public String getDetailsAsString(){
-        String text = "Producer: " + this.getProducerName() +
-                " | price: " + this.getPrice() + " | model: " +
-                this.getModelName() + " | type: " + this.getTypeName() +
-                " | material: " + this.getMaterialName();
+        String text = ANSI_GREEN + "Producer: " + ANSI_RESET + this.getProducerName() +
+                ANSI_GREEN + " | Price: " + ANSI_RESET + this.getPrice() + ANSI_GREEN + " | Model: " + ANSI_RESET +
+                this.getModelName() + ANSI_GREEN + " | Type: " + ANSI_RESET + this.getTypeName() +
+                ANSI_GREEN + " | Material: " + ANSI_RESET + this.getMaterialName();
         return text;
     }
 }

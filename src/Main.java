@@ -39,7 +39,7 @@ public class Main {
         magazine.addBike(childBike4);
         magazine.addBike(childBike5);
 
-        System.out.println(bike1.getDetailsAsString());
+
         magazine.printBikes();
     }
 }
