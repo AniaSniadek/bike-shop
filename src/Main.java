@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
 
@@ -39,7 +41,16 @@ public class Main {
         magazine.addBike(childBike4);
         magazine.addBike(childBike5);
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Show all bikes in stock? [Yes/No]");
+        String question = scanner.nextLine();
 
-        magazine.printBikes();
+        if(question.equals("Yes")){
+            magazine.printBikes();
+        } else {
+            System.out.println("Do you want to search for a bike by serial number? [Yes/No]");
+        }
+
+        //magazine.printBikes();
     }
 }

@@ -2,9 +2,6 @@ import java.util.Vector;
 
 public class Magazine {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
-
     static Vector<Bike> bikeList = new Vector<Bike>();
 
     public Vector<Bike> getBikeList() {
@@ -41,7 +38,7 @@ public class Magazine {
 //    }
 
     public void printBikes(){
-        System.out.println(ANSI_RED + "List of bikes in the system:" + ANSI_RESET);
+        System.out.println("List of bikes in the system:");
         for(Bike p : bikeList){
             System.out.println(p.getDetailsAsString());
         }
