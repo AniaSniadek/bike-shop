@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+
     public static void main(String[] args){
 
         //preparing the store environment
@@ -55,11 +58,11 @@ public class Main {
                 System.out.println("Thank you for using our program.");
                 System.exit(0);
             } else if (!question2.equals("Yes")){
-                System.out.println("Invalid input.");
+                System.out.println(ANSI_RED + "Invalid input." + ANSI_RESET);
                 System.exit(0);
             }
         } else {
-            System.out.println("Invalid input.");
+            System.out.println(ANSI_RED + "Invalid input." + ANSI_RESET);
             System.exit(0);
         }
 
@@ -82,7 +85,7 @@ public class Main {
             } else if(question.equals("No")){
                 System.out.println("The price has not been changed.");
             } else {
-                System.out.println("Invalid input.");
+                System.out.println(ANSI_RED + "Invalid input." + ANSI_RESET);
                 System.exit(0);
             }
         }

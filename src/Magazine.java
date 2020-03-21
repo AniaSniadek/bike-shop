@@ -4,10 +4,6 @@ public class Magazine {
 
     static Vector<Bike> bikeList = new Vector<Bike>();
 
-    public Vector<Bike> getBikeList() {
-        return bikeList;
-    }
-
     public void addBike(Bike bike){
         bikeList.add(bike);
     }
@@ -26,15 +22,6 @@ public class Magazine {
         return bikeList.elementAt(index);
     }
 
-//    public Vector<Bike> findBike(BikeDetails findDetails){
-//        Vector<Bike> matchingBikes = new Vector<Bike>();
-//        for(Bike p : bikeList){
-//            if(p.getDetails() == findDetails){
-//                matchingBikes.add(p);
-//            }
-//        }
-//        return matchingBikes;
-//    }
 
     public void printBikes(){
         System.out.println("List of bikes in the system:");
