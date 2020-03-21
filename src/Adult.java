@@ -1,9 +1,13 @@
-public class Adult {
-    public Bike bike;
+public class Adult extends Bike{
     public AdultDetails adultDetails;
 
-    public Adult(Bike bike, AdultDetails adultDetails) {
-        this.bike = bike;
+    public Adult(String number, double price, BikeDetails details, AdultDetails adultDetails) {
+        super(number, price, details);
         this.adultDetails = adultDetails;
+    }
+
+    @Override
+    public void getDetailsAsString() {
+        super.getDetailsAsString();
     }
 }

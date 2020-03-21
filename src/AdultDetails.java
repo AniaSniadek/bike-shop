@@ -1,9 +1,6 @@
-public class AdultDetails {
-    public BikeDetails bikeDetails;
+public class AdultDetails extends BikeDetails {
 
-    public AdultDetails() {};
-
-    public AdultDetails(BikeDetails bikeDetails) {
-        this.bikeDetails = bikeDetails;
+    public AdultDetails(Producer producer, Model model, Type type, Material material) {
+        super(producer, model, type, material);
     }
 }
