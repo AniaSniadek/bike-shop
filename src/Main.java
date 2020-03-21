@@ -41,13 +41,14 @@ public class Main {
         magazine.addBike(childBike4);
         magazine.addBike(childBike5);
 
+        //displaying products from the magazine
         Scanner scanner = new Scanner(System.in);
         System.out.println("Show all bikes in stock? [Yes/No]");
         String question = scanner.nextLine();
 
         if(question.equals("Yes")){
             magazine.printBikes();
-        } else {
+        } else if(question.equals("No")){
             System.out.println("Do you want to search for a bike by serial number? [Yes/No]");
             String question2 = scanner.nextLine();
             if(question2.equals("No")){
@@ -57,6 +58,9 @@ public class Main {
                 System.out.println("Invalid input.");
                 System.exit(0);
             }
+        } else {
+            System.out.println("Invalid input.");
+            System.exit(0);
         }
 
         System.out.println("Enter the bike number which you are looking for:");
@@ -71,16 +75,18 @@ public class Main {
             String question2 = scanner.nextLine();
             if(question2.equals("Yes")){
                 System.out.println("Write a new price:");
-                int price = scanner.nextInt();
+                double price = scanner.nextDouble();
                 foundedBike.setPrice(price);
                 System.out.println("Bike details after changing price:");
                 System.out.println(foundedBike.getDetailsAsString());
-            } else if()
+            } else if(question.equals("No")){
+                System.out.println("The price has not been changed.");
+            } else {
+                System.out.println("Invalid input.");
+                System.exit(0);
+            }
         }
 
-
-
-
-        //magazine.printBikes();
+        System.out.println("Thank you for using our program.");
     }
 }
