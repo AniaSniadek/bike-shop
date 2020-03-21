@@ -34,6 +34,10 @@ public class Main {
         magazine.addBike(bike4);
         magazine.addBike(bike5);
         magazine.addBike(childBike1);
+        magazine.addBike(childBike2);
+        magazine.addBike(childBike3);
+        magazine.addBike(childBike4);
+        magazine.addBike(childBike5);
 
         System.out.println(bike1.getDetailsAsString());
         magazine.printBikes();
