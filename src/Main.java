@@ -70,8 +70,12 @@ public class Main {
             System.out.println("Do you want to change the price of this bike? [Yes/No]");
             String question2 = scanner.nextLine();
             if(question2.equals("Yes")){
-
-            }
+                System.out.println("Write a new price:");
+                int price = scanner.nextInt();
+                foundedBike.setPrice(price);
+                System.out.println("Bike details after changing price:");
+                System.out.println(foundedBike.getDetailsAsString());
+            } else if()
         }
 
 
