@@ -50,33 +50,34 @@ public class Main {
         boolean quit = false;
 
         printMenu();
-
-        while (!quit){
-            int action = scanner.nextInt();
-            scanner.nextLine();
-            switch(action) {
-                case 0:
-                    quit = true;
-                    break;
-                case 1:
-                    magazine.printBikes();
-                    menu();
-                    break;
-                case 2:
-                    printBikeByNumber();
-                    menu();
-                    break;
-                case 3:
-                    changePrice();
-                    menu();
-                    break;
-                case 4:
-                    printMenu();
-                    break;
+        if(scanner.hasNextInt()){
+            while (!quit){
+                int action = scanner.nextInt();
+                scanner.nextLine();
+                switch(action) {
+                    case 0:
+                        quit = true;
+                        break;
+                    case 1:
+                        magazine.printBikes();
+                        menu();
+                        break;
+                    case 2:
+                        printBikeByNumber();
+                        menu();
+                        break;
+                    case 3:
+                        changePrice();
+                        menu();
+                        break;
+                    case 4:
+                        printMenu();
+                        break;
+                }
             }
+        } else {
+            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
         }
-
-
     }
 
     private static void printBikeByNumber(){
