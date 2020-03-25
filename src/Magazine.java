@@ -11,7 +11,6 @@ public class Magazine {
     public int findIndex(String number){
         for(Bike p : bikeList){
             if(p.getNumber().equals(number)){
-                System.out.println("Bike with this number has been found:");
                 return bikeList.indexOf(p);
             }
         }

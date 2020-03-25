@@ -83,41 +83,29 @@ public class Main {
     private static void printBikeByNumber(){
         System.out.println("Enter the bike number which you are looking for:");
         String number = scanner.nextLine();
-        if(scanner.hasNextLine()){
-            int bikeIndex = magazine.findIndex(number);
-            if(bikeIndex == -1){
-                System.out.println("There is no bike with this number in stock.");
-            } else {
-                Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
-                System.out.println("Bike with this number has been found:");
-                System.out.println(foundedBike.getDetailsAsString());
-            }
+        int bikeIndex = magazine.findIndex(number);
+        if(bikeIndex == -1){
+            System.out.println("There is no bike with this number in stock.");
         } else {
-            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
+            System.out.println("Bike with this number has been found:");
+            System.out.println(foundedBike.getDetailsAsString());
         }
     }
 
     private static void changePrice() {
         System.out.println("Enter the number of the bike you want to change the price:");
         String number = scanner.nextLine();
-        if(scanner.hasNextLine()){
-            int bikeIndex = magazine.findIndex(number);
-            if(bikeIndex == -1){
-                System.out.println("There is no bike with this number in stock.");
-            } else {
-                Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
-                System.out.println("Write a new price:");
-                double price = scanner.nextDouble();
-                if(scanner.hasNextDouble()){
-                    foundedBike.setPrice(price);
-                    System.out.println("Bike details after changing price:");
-                    System.out.println(foundedBike.getDetailsAsString());
-                } else {
-                    System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
-                }
-            }
+        int bikeIndex = magazine.findIndex(number);
+        if(bikeIndex == -1){
+            System.out.println("There is no bike with this number in stock.");
         } else {
-            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
+            System.out.println("Write a new price:");
+            double price = scanner.nextDouble();
+            foundedBike.setPrice(price);
+            System.out.println("Bike details after changing price:");
+            System.out.println(foundedBike.getDetailsAsString());
         }
     }
 
