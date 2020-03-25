@@ -3,4 +3,4 @@ This is a simple object-oriented programming project written during learning Jav
 
 ## Built With
 
-* [Java](https://www.oracle.com/java/)
+* [Java](https://docs.oracle.com/en/java/)
