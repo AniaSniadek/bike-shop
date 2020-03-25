@@ -31,10 +31,11 @@ public class Main {
     private static Child childBike4 = new Child("O231", 537.00, prod2, "Jim", type1, mat2, 2);
     private static Child childBike5 = new Child("J505", 101.00, prod1, "Niko", type1, mat3, 4);
 
+    private static Magazine magazine = new Magazine();
 
     public static void main(String[] args) {
         //adding products to the Magazine
-        Magazine magazine = new Magazine();
+
         magazine.addBike(bike1);
         magazine.addBike(bike2);
         magazine.addBike(bike3);
@@ -60,6 +61,9 @@ public class Main {
                 case 1:
                     magazine.printBikes();
                     break;
+                case 2:
+                    printBikeByNumber();
+                    break;
                 case 4:
                     printMenu();
                     break;
@@ -67,6 +71,18 @@ public class Main {
         }
 
 
+    }
+
+    private static void printBikeByNumber(){
+        System.out.println("Enter the bike number which you are looking for:");
+        String number = scanner.nextLine();
+        int bikeIndex = magazine.findIndex(number);
+        if(bikeIndex == -1){
+            System.out.println("There is no bike with this number in stock.");
+        } else {
+            Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
+            System.out.println(foundedBike.getDetailsAsString());
+        }
     }
 
     private static void printMenu(){
