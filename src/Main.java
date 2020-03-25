@@ -60,12 +60,15 @@ public class Main {
                     break;
                 case 1:
                     magazine.printBikes();
+                    menu();
                     break;
                 case 2:
                     printBikeByNumber();
+                    menu();
                     break;
                 case 3:
                     changePrice();
+                    menu();
                     break;
                 case 4:
                     printMenu();
@@ -113,5 +116,9 @@ public class Main {
                 "3 - To change the price of the bike\n" +
                 "4 - To print menu options\n" +
                 "---------------------------------------");
+    }
+
+    private static void menu() {
+        System.out.println(ANSI_RED + "\nPlease press 4 to print menu options!" + ANSI_RESET);
     }
 }
