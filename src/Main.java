@@ -46,8 +46,25 @@ public class Main {
         magazine.addBike(childBike4);
         magazine.addBike(childBike5);
 
+        boolean quit = false;
+
         printMenu();
 
+        while (!quit){
+            int action = scanner.nextInt();
+            scanner.nextLine();
+            switch(action) {
+                case 0:
+                    quit = true;
+                    break;
+                case 1:
+                    magazine.printBikes();
+                    break;
+                case 4:
+                    printMenu();
+                    break;
+            }
+        }
 
 
     }
@@ -57,6 +74,8 @@ public class Main {
         System.out.println("0 - To quit\n" +
                 "1 - To display all bikes in the system\n" +
                 "2 - To display bike by serial number\n" +
-                "3 - To change the price of the bike");
+                "3 - To change the price of the bike\n" +
+                "4 - To print menu options\n" +
+                "---------------------------------------");
     }
 }
