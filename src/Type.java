@@ -1,5 +1,5 @@
 public class Type {
-    private String type;
+    private final String type;
 
     public Type(String type) {
         this.type = type;

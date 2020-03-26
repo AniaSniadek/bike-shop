@@ -1,5 +1,5 @@
 public class Producer {
-    private String name;
+    private final String name;
 
     public Producer(String name) {
         this.name = name;

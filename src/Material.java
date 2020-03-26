@@ -1,5 +1,5 @@
 public class Material {
-    private String material;
+    private final String material;
 
     public Material(String material) {
         this.material = material;

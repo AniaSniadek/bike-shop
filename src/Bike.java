@@ -1,5 +1,5 @@
 public class Bike {
-    protected String number;
+    protected final String number;
     protected double price;
     protected Producer producer;
     protected String model;
