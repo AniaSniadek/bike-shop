@@ -17,6 +17,22 @@ public class Magazine {
         return -1;
     }
 
+    public void findBikeByProducer(String producer){
+        Vector<Bike> copyBikeList = new Vector<Bike>();
+        for(Bike p : bikeList){
+            if(p.getProducerName().equals(producer)){
+                copyBikeList.add(p);
+            }
+        }
+        if(copyBikeList.isEmpty()){
+            System.out.println("There is no bike from this producer in the stock");
+        } else {
+            for(Bike p : copyBikeList){
+                System.out.println(p.getDetailsAsString());
+            }
+        }
+    }
+
     public Bike getBikeWithIndex(int index){
         return bikeList.elementAt(index);
     }
