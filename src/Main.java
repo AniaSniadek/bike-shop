@@ -71,6 +71,10 @@ public class Main {
                         menu();
                         break;
                     case 4:
+                        findProducer();
+                        menu();
+                        break;
+                    case 5:
                         printMenu();
                         break;
                 }
@@ -109,17 +113,24 @@ public class Main {
         }
     }
 
+    private static void findProducer(){
+        System.out.println("Enter the name of the Producer:");
+        String name = scanner.nextLine();
+        magazine.findBikeByProducer(name);
+    }
+
     private static void printMenu(){
         System.out.println("Available actions:\nPress ");
         System.out.println("0 - To quit\n" +
                 "1 - To display all bikes in the system\n" +
                 "2 - To display bike by serial number\n" +
                 "3 - To change the price of the bike\n" +
-                "4 - To print menu options\n" +
+                "4 - To display all bikes from one producer\n" +
+                "5 - To print menu options\n" +
                 "---------------------------------------");
     }
 
     private static void menu() {
-        System.out.println(ANSI_RED + "\nPlease press 4 to print menu options!" + ANSI_RESET);
+        System.out.println(ANSI_RED + "\nPlease press 5 to print menu options!" + ANSI_RESET);
     }
 }

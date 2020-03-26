@@ -25,7 +25,7 @@ public class Magazine {
             }
         }
         if(copyBikeList.isEmpty()){
-            System.out.println("There is no bike from this producer in the stock");
+            System.out.println("There is no bike from this producer in the stock.");
         } else {
             for(Bike p : copyBikeList){
                 System.out.println(p.getDetailsAsString());
