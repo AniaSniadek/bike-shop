@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -106,10 +107,16 @@ public class Main {
         } else {
             Bike foundedBike = magazine.getBikeWithIndex(bikeIndex);
             System.out.println("Write a new price:");
-            double price = scanner.nextDouble();
-            foundedBike.setPrice(price);
-            System.out.println("Bike details after changing price:");
-            System.out.println(foundedBike.getDetailsAsString());
+            try {
+                double price = scanner.nextDouble();
+                foundedBike.setPrice(price);
+                System.out.println("Bike details after changing price:");
+                System.out.println(foundedBike.getDetailsAsString());
+            } catch (InputMismatchException e){
+                System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+                System.exit(0);
+            }
+
         }
     }
 
