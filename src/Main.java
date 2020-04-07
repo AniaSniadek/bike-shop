@@ -53,35 +53,41 @@ public class Main {
         printMenu();
         if(scanner.hasNextInt()){
             while (!quit){
-                int action = scanner.nextInt();
-                scanner.nextLine();
-                switch(action) {
-                    case 0:
-                        quit = true;
-                        break;
-                    case 1:
-                        magazine.printBikes();
-                        menu();
-                        break;
-                    case 2:
-                        printBikeByNumber();
-                        menu();
-                        break;
-                    case 3:
-                        changePrice();
-                        menu();
-                        break;
-                    case 4:
-                        findProducer();
-                        menu();
-                        break;
-                    case 5:
-                        printMenu();
-                        break;
+                try{
+                    int action = scanner.nextInt();
+                    scanner.nextLine();
+                    switch(action) {
+                        case 0:
+                            quit = true;
+                            break;
+                        case 1:
+                            magazine.printBikes();
+                            menu();
+                            break;
+                        case 2:
+                            printBikeByNumber();
+                            menu();
+                            break;
+                        case 3:
+                            changePrice();
+                            menu();
+                            break;
+                        case 4:
+                            findProducer();
+                            menu();
+                            break;
+                        case 5:
+                            printMenu();
+                            break;
+                    }
+                } catch (InputMismatchException e) {
+                    System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+                    System.exit(0);
                 }
-            }
+                }
         } else {
             System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            System.exit(0);
         }
     }
 
