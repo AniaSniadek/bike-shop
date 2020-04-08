@@ -1,9 +1,6 @@
 public class Child extends Bike{
     public int numberOfWheels;
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_CYAN = "\u001B[36m";
 
     public Child(String number, double price, Producer producer, String model, Type type, Material material, int numberOfWheels) {
         super(number, price, producer, model, type, material);

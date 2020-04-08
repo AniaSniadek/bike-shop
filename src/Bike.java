@@ -6,8 +6,6 @@ public class Bike {
     protected Type type;
     protected Material material;
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_GREEN = "\u001B[32m";
 
     public Bike(String number, double price, Producer producer, String model, Type type, Material material) {
         this.number = number;

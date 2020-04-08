@@ -2,9 +2,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    //colors of text
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
 
     private static Scanner scanner = new Scanner(System.in);
 
