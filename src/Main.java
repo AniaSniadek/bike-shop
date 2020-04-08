@@ -79,12 +79,12 @@ public class Main {
                             break;
                     }
                 } catch (InputMismatchException e) {
-                    System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+                    System.out.println(Colors.ANSI_RED + "Invalid input!" + Colors.ANSI_RESET);
                     System.exit(0);
                 }
                 }
         } else {
-            System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+            System.out.println(Colors.ANSI_RED + "Invalid input!" + Colors.ANSI_RESET);
             System.exit(0);
         }
     }
@@ -117,7 +117,7 @@ public class Main {
                 System.out.println("Bike details after changing price:");
                 System.out.println(foundedBike.getDetailsAsString());
             } catch (InputMismatchException e){
-                System.out.println(ANSI_RED + "Invalid input!" + ANSI_RESET);
+                System.out.println(Colors.ANSI_RED + "Invalid input!" + Colors.ANSI_RESET);
                 System.exit(0);
             }
 
@@ -142,6 +142,6 @@ public class Main {
     }
 
     private static void menu() {
-        System.out.println(ANSI_RED + "\nPlease press 5 to print menu options!" + ANSI_RESET);
+        System.out.println(Colors.ANSI_RED + "\nPlease press 5 to print menu options!" + Colors.ANSI_RESET);
     }
 }

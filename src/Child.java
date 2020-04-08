@@ -13,11 +13,11 @@ public class Child extends Bike{
 
     @Override
     public String getDetailsAsString() {
-        String text = ANSI_CYAN+ "Producer: " + ANSI_RESET + this.getProducerName() +
-                ANSI_CYAN + " | Price: " + ANSI_RESET + this.getPrice() + ANSI_CYAN + " | Model: " + ANSI_RESET +
-                this.getModelName() + ANSI_CYAN + " | Type: " + ANSI_RESET + this.getTypeName() +
-                ANSI_CYAN + " | Material: " + ANSI_RESET + this.getMaterialName() +
-                ANSI_CYAN + " | number of wheels: " + ANSI_RESET + this.getNumberOfWheels();
+        String text = Colors.ANSI_CYAN+ "Producer: " + Colors.ANSI_RESET + this.getProducerName() +
+                Colors.ANSI_CYAN + " | Price: " + Colors.ANSI_RESET + this.getPrice() + Colors.ANSI_CYAN + " | Model: " + Colors.ANSI_RESET +
+                this.getModelName() + Colors.ANSI_CYAN + " | Type: " + Colors.ANSI_RESET + this.getTypeName() +
+                Colors.ANSI_CYAN + " | Material: " + Colors.ANSI_RESET + this.getMaterialName() +
+                Colors.ANSI_CYAN + " | number of wheels: " + Colors.ANSI_RESET + this.getNumberOfWheels();
         return text;
     }
 }

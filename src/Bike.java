@@ -46,10 +46,10 @@ public class Bike {
     }
 
     public String getDetailsAsString(){
-        String text = ANSI_GREEN + "Producer: " + ANSI_RESET + this.getProducerName() +
-                ANSI_GREEN + " | Price: " + ANSI_RESET + this.getPrice() + ANSI_GREEN + " | Model: " + ANSI_RESET +
-                this.getModelName() + ANSI_GREEN + " | Type: " + ANSI_RESET + this.getTypeName() +
-                ANSI_GREEN + " | Material: " + ANSI_RESET + this.getMaterialName();
+        String text = Colors.ANSI_GREEN + "Producer: " + Colors.ANSI_RESET + this.getProducerName() +
+                Colors.ANSI_GREEN + " | Price: " + Colors.ANSI_RESET + this.getPrice() + Colors.ANSI_GREEN + " | Model: " + Colors.ANSI_RESET +
+                this.getModelName() + Colors.ANSI_GREEN + " | Type: " + Colors.ANSI_RESET + this.getTypeName() +
+                Colors.ANSI_GREEN + " | Material: " + Colors.ANSI_RESET + this.getMaterialName();
         return text;
     }
 }
