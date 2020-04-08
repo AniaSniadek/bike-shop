@@ -1,4 +1,5 @@
 public class Producer {
+
     private final String name;
 
     public Producer(String name) {

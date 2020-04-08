@@ -1,4 +1,5 @@
 public class Type {
+
     private final String type;
 
     public Type(String type) {

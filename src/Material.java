@@ -1,4 +1,5 @@
 public class Material {
+
     private final String material;
 
     public Material(String material) {
