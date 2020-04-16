@@ -6,16 +6,16 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     //preparing the store environment
-    private static Producer prod1 = new Producer("Kross");
-    private static Producer prod2 = new Producer("Author");
+    private static final Producer prod1 = new Producer("Kross");
+    private static final Producer prod2 = new Producer("Author");
 
-    private static Type type1 = new Type("trekking");
-    private static Type type2 = new Type("bicyclist");
-    private static Type type3 = new Type("mountain");
+    private static final Type type1 = new Type("trekking");
+    private static final Type type2 = new Type("bicyclist");
+    private static final Type type3 = new Type("mountain");
 
-    private static Material mat1 = new Material("aluminium");
-    private static Material mat2 = new Material("steel");
-    private static Material mat3 = new Material("carbon");
+    private static final Material mat1 = new Material("aluminium");
+    private static final Material mat2 = new Material("steel");
+    private static final Material mat3 = new Material("carbon");
 
     //creating products
     private static Adult bike1 = new Adult("M945", 980.00, prod1, "Navigto", type1, mat1);
