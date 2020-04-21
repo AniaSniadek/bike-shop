@@ -1,4 +1,4 @@
-public class Child extends Bike{
+public class Child extends Bike {
 
     public int numberOfWheels;
 
