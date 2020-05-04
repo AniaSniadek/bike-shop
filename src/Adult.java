@@ -5,7 +5,7 @@ public class Adult extends Bike {
     }
 
     @Override
-    public String getDetailsAsString() {
+    public StringBuilder getDetailsAsString() {
         return super.getDetailsAsString();
     }
 }
