@@ -47,11 +47,6 @@ public class Bike {
     }
 
     public StringBuilder getDetailsAsString(){
-        String text2 = Colors.ANSI_GREEN + "Producer: " + Colors.ANSI_RESET + this.getProducerName() +
-                Colors.ANSI_GREEN + " | Price: " + Colors.ANSI_RESET + this.getPrice() + Colors.ANSI_GREEN + " | Model: " + Colors.ANSI_RESET +
-                this.getModelName() + Colors.ANSI_GREEN + " | Type: " + Colors.ANSI_RESET + this.getTypeName() +
-                Colors.ANSI_GREEN + " | Material: " + Colors.ANSI_RESET + this.getMaterialName();
-
         StringBuilder text = new StringBuilder("");
         text.append(Colors.ANSI_GREEN + "Producer: " + Colors.ANSI_RESET + this.getProducerName());
         text.append(Colors.ANSI_GREEN + " | Price: " + Colors.ANSI_RESET + this.getPrice());
